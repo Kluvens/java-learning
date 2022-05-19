@@ -517,3 +517,30 @@ public class Main {
   }
 }
 ```
+
+## Java modifiers
+access modifier means that it is used to set the access level for classes, attributes, methods and constructors.
+
+### Access modifiers:
+for classes:
+- public - the class is accessible by any other class
+- default - the class is only accessible by classes in the same package.
+
+for attributes, methods and constructors:
+- public - the code is accessible for all classes
+- private - the code is only accessible within the declared class
+- default - the code is only accessible in the same package
+- protected - the code is accessible in the same package and subclasses
+
+### Non-access modifiers:
+for classes:
+- final - the class cannot be inherited by other classes
+- abstract - the class cannot be used to create objects
+
+for attributes and methods:
+- final - attributes and methods cannot be overridden/modified
+- static - attributes and methods belongs to the class, rather than an object
+- abstract - can only be used in an abstract class, and can only be used on methods
+- transient - attributes and methods are skipped when serializing the object containing them
+- synchronized - methods can only be accessed by one thread at a time
+- volatitle - the value of an attribute is not cached thread-locally, and is always read from the "main memory"
