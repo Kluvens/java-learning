@@ -544,3 +544,70 @@ for attributes and methods:
 - transient - attributes and methods are skipped when serializing the object containing them
 - synchronized - methods can only be accessed by one thread at a time
 - volatitle - the value of an attribute is not cached thread-locally, and is always read from the "main memory"
+
+## Encapsulation
+The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:
+- declare class variables/attributes as private
+- provide public get and set methods to access and update the value of a private variable
+
+``` java
+public class Person {
+  private String name; // private = restricted access
+
+  // Getter
+  public String getName() {
+    return name;
+  }
+
+  // Setter
+  public void setName(String newName) {
+    this.name = newName;
+  }
+}
+```
+
+**Why encapsulation:**
+- Better control of class attributes and methods
+- Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)
+- Flexible: the programmer can change one part of the code without affecting other parts
+- Increased security of data
+
+## Java packages & API
+A package in Java is used to group related classes.
+We use packages to avoid name conflicts, and to write a better maintainable code.
+
+Packages are divided into two categories:
+- Built-in Packages (packages from the Java API)
+- User-defined Packages (create your own packages)
+
+### Built-in packages
+
+**Import a class:**
+``` java
+import java.util.Scanner;
+
+class MyClass {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter username");
+
+    String userName = myObj.nextLine();
+    System.out.println("Username is: " + userName);
+  }
+}
+```
+
+**Import a package:**
+``` java
+import java.util.*;
+```
+
+### user-defined packages
+``` java
+package mypack;
+class MyPackageClass {
+  public static void main(String[] args) {
+    System.out.println("This is my package!");
+  }
+}
+```
