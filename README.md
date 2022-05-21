@@ -837,3 +837,66 @@ public class Main {
   }
 }
 ```
+
+## Java HashMap
+**add items**
+``` java
+// Import the HashMap class
+import java.util.HashMap;
+
+public class Main {
+  public static void main(String[] args) {
+    // Create a HashMap object called capitalCities
+    HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+    // Add keys and values (Country, City)
+    capitalCities.put("England", "London");
+    capitalCities.put("Germany", "Berlin");
+    capitalCities.put("Norway", "Oslo");
+    capitalCities.put("USA", "Washington DC");
+    System.out.println(capitalCities);
+  }
+}
+```
+
+**access an item**
+``` java
+capitalCities.get("England");
+```
+
+**remove an item**
+``` java
+capitalCities.remove("England");
+```
+
+**remove all items**
+``` java
+capitalCities.clear();
+```
+
+**hashmap size**
+``` java
+capitalCities.size();
+```
+
+**loop through a hashmap**
+``` java
+// Print keys
+for (String i : capitalCities.keySet()) {
+  System.out.println(i);
+}
+```
+
+``` java
+// Print values
+for (String i : capitalCities.values()) {
+  System.out.println(i);
+}
+```
+
+``` java
+// Print keys and values
+for (String i : capitalCities.keySet()) {
+  System.out.println("key: " + i + " value: " + capitalCities.get(i));
+}
+```
