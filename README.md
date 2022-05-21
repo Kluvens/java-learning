@@ -900,3 +900,51 @@ for (String i : capitalCities.keySet()) {
   System.out.println("key: " + i + " value: " + capitalCities.get(i));
 }
 ```
+
+## Java HashSet
+A HashSet is a collection of items where every item is unique, and it is found in the java.util package
+
+**add items**
+``` java
+// Import the HashSet class
+import java.util.HashSet;
+
+public class Main {
+  public static void main(String[] args) {
+    HashSet<String> cars = new HashSet<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("BMW");
+    cars.add("Mazda");
+    System.out.println(cars);
+  }
+}
+```
+
+**check if an item exists**
+``` java
+cars.contains("Mazda");
+```
+
+**remove an item**
+``` java
+cars.remove("Volvo");
+```
+
+**remove all items**
+``` java
+cars.clear();
+```
+
+**hashset size**
+``` java
+cars.size();
+```
+
+**loop through a hashset**
+``` java
+for (String i : cars) {
+  System.out.println(i);
+}
+```
