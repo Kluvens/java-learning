@@ -948,3 +948,80 @@ for (String i : cars) {
   System.out.println(i);
 }
 ```
+
+## Java iterator
+``` java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+  
+    // Make a collection
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+  
+    // Get the iterator
+    Iterator<String> it = cars.iterator();
+  
+    // Print the first item
+    while(it.hasNext()) {
+  		System.out.println(it.next());
+	}
+  }
+}
+```
+
+## Java exception
+``` java
+// this is very similar to python try..except block
+public class Main {
+  public static void main(String[] args) {
+    try {
+      int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    } finally {
+      System.out.println("The 'try catch' is finished.");
+    }
+  }
+}
+```
+The throw keyword:
+``` java
+// this is similar to raise statement in python
+public class Main {
+  static void checkAge(int age) {
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+      System.out.println("Access granted - You are old enough!");
+    }
+  }
+
+  public static void main(String[] args) {
+    checkAge(15); // Set age to 15 (which is below 18...)
+  }
+}
+```
+
+## Java lambda
+``` java
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    numbers.add(5);
+    numbers.add(9);
+    numbers.add(8);
+    numbers.add(1);
+    numbers.forEach( (n) -> { System.out.println(n); } );
+  }
+}
+```
