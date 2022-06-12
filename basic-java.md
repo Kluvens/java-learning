@@ -1,5 +1,32 @@
 # Basic Java
 
+## Object oriented programming (OOP)
+- programmers concentrate on creating their own user-defined types called classes.
+- each class contains data as well as the set of methods that manipulate the data.
+- an instance of a user-defined type is called an object
+- OOP encapsulates data and methods into objects, the data and methods of an object are intinately tried together.
+- objects have the property of information hiding.
+
+### Inheritance in object oriented programming
+- Inheritance is a form of software reusability in which new classes are created from the existing classes by absorbing their attributes and behaviours.
+- instead of defining completely new class, the programmer can designate that the new class is to inherit attributes and behaviours of the existing class which is called superclass. The new class is referred to as subclass.
+- programmers can add more attributes and behaviours to the subclass, hence, normally subclasses have more features than their super class.
+
+**Is-a - inheritance relationship**
+- is an "is-a" relationship, an object of a subclass may aslo be treated as an object of the superclass.
+- use inheritance to model "is-a" relationship
+
+**Has-a association relationship**
+- In a "has-a" relationship, a class object has an object of another class to store its state or do its work.
+- The "has-a" relationship is quite different from an "is-a" relationship.
+- "Has-a" relationship are examples of creating new classes by composition of existing classes.
+
+### classes and objects
+- a class is a collection of data and methods that operate on that data
+- objects are instances of a class and in java, objects are created by instantiating a class
+- we can access data fields of an object
+- to access the methods of an object, we can use the same syntax as accessing the data of an object
+
 ##  Basic Java
 Code for "Hello World"
 ```java
