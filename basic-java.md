@@ -60,6 +60,32 @@ public abstract class Shape {
 - in java, a new class can extend exactly one superclasses - a model known as single inheritance
 - in java, interface in the class hierarchy can be used to add multiple inheritance
 
+## Interfaces
+- interfaces are like abstract classes, but with few important difference
+- all the methods defined within an interface are implicitly abstract, which means we don't need to use abstract keyword
+- variables declared in an interface must be static and final, that means, they must be constants
+- just like a class extends its superclass, it also can optionally implements an interface
+- in order to implement an interface, a class must first declare the interface in an implements clause, and then it must provide an implementation for all of the abstract methods of the interface
+- a class can implements more than one interfaces
+- interfaces can have sub-interfaces just like classes can have subclasses
+- a sub-interface inherits all the abstract methods and constants of its super-interface, and may define new astract methods and constants
+- interface can extend more than one interface at a time
+
+## methods overriding (polymorphism)
+- when a class defines a method using the same name, return type, and by the number, type, and position of its arguments as a method in its superclass, the method in the class overrides the method in the superclass
+- if a method is invoked for an object of the class, it's the new definition of the method that is called, and not the superclass's old definition
+- an object's ability to decide what method to apply to itself, depending on where it is in the inheritance hierarchy, is usually called polymorphism
+
+### method overloading
+Defining methods with the same name and different argument or return types is called method overloading
+
+In java, a method is distinguished by its method signature - its name, return type, and by the number, type, and position of its arguments.
+
+## Data hiding and encapsulation
+We can hide the data within the class and make it available only through the methods
+
+This can help in maintaining the consistency of the data for an object, that means the state of an object.
+
 ##  Basic Java
 Code for "Hello World"
 ```java
