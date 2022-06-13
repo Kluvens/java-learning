@@ -27,6 +27,39 @@
 - we can access data fields of an object
 - to access the methods of an object, we can use the same syntax as accessing the data of an object
 
+## Super calsses, objects, and the class hierarchy
+- every class has a superclass
+- if we don't define a superclass, by default, the superclass is the class Object
+- Object class is the only class that does not have a superclass
+- The methods defined by Object can be called by any java object(instance)
+
+## Abstract classes
+Using abstract classses,
+- we can declare classes that define only part of an implementation
+- leaving extended classes to provide specific implementation of some or all the methods
+
+The benefits of an abstract class:
+- is that methods may be declared such that the programmer knows the interface deinition of an object.
+- however, methods can be implementated differently in different subclasses of the abstract class.
+
+Some rules about abstract classes:
+- an abstract class is a class that declared abstract
+- if a class includes abstract methods, then the class itself must be declared abstract
+- an abstract class cannot be instantiated
+- a subclass of an abstract class can be instantiated if it overrides each of the abstract methods of its superclass and provides an implementation for all of them
+- if a subclass of an abstract class does not implement all the abstract methods it inherits, that subclass is itself abstract
+
+``` java
+public abstract class Shape {
+	public abstract double area();
+	public abstract double circumference();
+}
+```
+
+## single inheritance vs. multiple inheritance
+- in java, a new class can extend exactly one superclasses - a model known as single inheritance
+- in java, interface in the class hierarchy can be used to add multiple inheritance
+
 ##  Basic Java
 Code for "Hello World"
 ```java
