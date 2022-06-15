@@ -1062,6 +1062,19 @@ public class Main {
 ```
 
 ## Java exception
+- An exception is an event, which occurs during th execution of a program, that disrupts the normal flow of the program's instructions.
+- When error occurs, an exeception object is created and given to the runtime system, this is called throwing an execution.
+
+There are three kinds of exception:
+- checked exception(IOException, SQLException, etc)
+- Error(VirtualMachineError, OutOfMemoryError, etc)
+- Runtime exception(ArrayIndexOutOfBoundsExceptions, ArithmeticException, etc)
+
+Checked vs. Unchecked exceptions:
+- an exception's type determines whether it's checked or unchecked
+- all classes that are subclasses of RuntimeException (typically caused by defects in your program's code) or Error (typically system issues) are unchecked exceptions
+- all classes that inherit from class Exception but not directly or indirectly from class RuntimeException are considered to be checked exceptions
+
 ``` java
 // this is very similar to python try..except block
 public class Main {
@@ -1070,7 +1083,7 @@ public class Main {
       int[] myNumbers = {1, 2, 3};
       System.out.println(myNumbers[10]);
     } catch (Exception e) {
-      System.out.println("Something went wrong.");
+      System.err.println("Something went wrong.");
     } finally {
       System.out.println("The 'try catch' is finished.");
     }
@@ -1093,6 +1106,32 @@ public class Main {
   public static void main(String[] args) {
     checkAge(15); // Set age to 15 (which is below 18...)
   }
+}
+```
+
+Exception about files:
+``` java
+public void writeList() {
+	printWriter out = null;
+	
+	try {
+		System.out.println("Entering" + "try statement");
+		out = new PrintWriter(new FileWriter("OutFile.txt"));
+		for (int i = 0; i < SIZE; i++) {
+			out.println("Value at: " + i + " = " + list.get(i));
+		}
+	} catch (IndexOutOfBoundsException e) {
+		System.err.println("Caught IndexOutOfBoundsException: " + e.getMessage());
+	} catch (IOException e) {
+		System.err.println("Caught IOException: " + e.getMessage());
+	} finally {
+		if (out != null) {
+			System.out.println("Closing PrintWriter");
+			out.close();
+		} else {
+			System.out.println("PrintWriter not open");
+		}
+	}
 }
 ```
 
