@@ -1109,7 +1109,7 @@ public class Main {
 }
 ```
 
-Exception about files:
+**Exception about files:**
 ``` java
 public void writeList() {
 	printWriter out = null;
@@ -1132,6 +1132,30 @@ public void writeList() {
 			System.out.println("PrintWriter not open");
 		}
 	}
+}
+```
+
+User defined exception:
+- We can create user defined exceptions
+- all exceptions must be a child of Throwable
+- A checked exception need to extend the Exception class, but not directly or indirectly from class RuntimeException
+- An unchecked exception (like a runtime exception) need to extend the RuntimeException class.
+
+``` java
+public class FileTransferException extends Exception {
+    public FileTransferException(String message) {
+        super(message);
+    }
+    public static class VirtualFileNotFoundException extends FileTransferException {
+        public VirtualFileNotFoundException(String message) {
+            super(message);
+        }
+    }
+    public static class VirtualFileAlreadyExistsException extends FileTransferException {
+        public VirtualFileAlreadyExistsException(String message) {
+            super(message);
+        }
+    }
 }
 ```
 
